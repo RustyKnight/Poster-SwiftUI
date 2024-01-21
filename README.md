@@ -5,6 +5,6 @@ An experimentation in creating a "poster view" which can load images from a loca
 <table>
   <tr valign="top">
     <td><img src="Snapshots/Desktop.png"></td>
-    <td><img src="Snapshots/Mobile.png" height=auto width=33%></td>
+    <td><img src="Snapshots/Mobile.png"></td>
   </tr>
 </table>
