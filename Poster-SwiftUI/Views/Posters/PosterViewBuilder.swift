@@ -14,11 +14,11 @@ public struct PosterViewBuilder {
         return width / 0.666666666666667
     }
     
-    static func buildView(_ posterImage: Data?, prototypeImage: Image, prototypeText: String? = nil) -> some View {
+    static func buildView(_ posterImage: Image?, prototypeImage: Image, prototypeText: String? = nil) -> some View {
         return HStack(alignment: .center) {
-            if let posterImage, let image = Image(data: posterImage) {
+            if let posterImage {
                 ZStack {
-                    image
+                    posterImage
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipped()

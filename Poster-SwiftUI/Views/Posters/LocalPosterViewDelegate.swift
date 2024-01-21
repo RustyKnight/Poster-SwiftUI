@@ -11,6 +11,7 @@ import UIKit
 #elseif canImport(AppKit)
 import AppKit
 #endif
+import SwiftUI
 
 struct LocalPosterViewDelegate: PosterViewDelegate {
     
@@ -20,8 +21,9 @@ struct LocalPosterViewDelegate: PosterViewDelegate {
         self.resourceName = resourceName
     }
     
-    func imageForPoster() async throws -> Data? {
+    func imageForPoster() async throws -> Image? {
         guard let url = Bundle.main.url(forResource: "BabyYoda", withExtension: ".jpg") else { return nil }
-        return try Data(contentsOf: url)
+        let data = try Data(contentsOf: url)
+        return Image(data: data)
     }
 }

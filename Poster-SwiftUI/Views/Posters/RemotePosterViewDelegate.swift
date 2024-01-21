@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct RemotePosterViewDelegate: PosterViewDelegate {
     
@@ -15,7 +16,8 @@ struct RemotePosterViewDelegate: PosterViewDelegate {
         self.resourceUrl = resourceUrl
     }
     
-    func imageForPoster() async throws -> Data? {
-        try await URLSession.shared.data(from: resourceUrl).0
+    func imageForPoster() async throws -> Image? {
+        let data = try await URLSession.shared.data(from: resourceUrl).0
+        return Image(data: data)
     }
 }

@@ -14,7 +14,7 @@ import AppKit
 #endif
 import SwiftUI
 
-public extension Image {
+extension Image {
     /// Initializes a SwiftUI `Image` from data.
     init?(data: Data) {
 #if canImport(UIKit)
@@ -29,7 +29,19 @@ public extension Image {
     }
 }
 
-public extension Data {
+extension Image {
+    #if canImport(AppKit)
+    init(from: NSImage) {
+        self.init(nsImage: from)
+    }
+    #elseif canImport(UIKit)
+    init(from: UIImage) {
+        self.init(uiImage: from)
+    }
+    #endif
+}
+
+extension Data {
     func toImage() -> Image? {
         return Image(data: self)
     }

@@ -9,12 +9,11 @@ import Foundation
 import SwiftUI
 
 public protocol PosterViewDelegate {
-    //    func didTapPoster()
-    func imageForPoster() async throws -> Data?
+    func imageForPoster() async throws -> Image?
 }
 
 public struct DynamicPosterView: View {
-    @State private var posterImage: Data?
+    @State private var posterImage: Image?
     
     @State private var prototypeImage: Image
     @State private var prototypeText: String?
