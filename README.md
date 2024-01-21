@@ -4,7 +4,7 @@ An experimentation in creating a "poster view" which can load images from a loca
 
 <table>
   <tr>
-    <td>![](Snapshots/Desktop.png)</td>
-    <td>![](Snapshots/Mobile.png)</td>
+    <td><img src="Snapshots/Desktop.png"></td>
+    <td><img src="Snapshots/Mobile.png"></td>
   </tr>
 </table>
