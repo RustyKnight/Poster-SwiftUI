@@ -34,6 +34,7 @@ struct ContentView: View {
                 ForEach(model) {
                     DynamicPosterView(
                         prototypeImage: Image.posterFilled,
+                        prototypeText: "Poster here",
                         delegate: $0.delegate
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 16))

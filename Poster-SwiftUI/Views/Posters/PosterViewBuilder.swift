@@ -27,20 +27,20 @@ public struct PosterViewBuilder {
             } else {
                 ZStack {
                     Rectangle()
-                        .foregroundColor(Color.black)
-                        .background(Color.black, in: Rectangle())
+                        .foregroundColor(Color.secondary)
+                        .background(Color.secondary, in: Rectangle())
                     //Image(systemName: "tv")
                     prototypeImage
                         .resizable()
                         .frame(width: width / 4, height: width / 4)
-                        .foregroundColor(.white)
+                        .foregroundColor(.primary)
                         .opacity(0.5)
                 }
                 .overlay(alignment: .bottom) {
                     if let prototypeText {
                         VStack(alignment: .center) {
                             Text(prototypeText)
-                                .foregroundStyle(Color.white)
+                                .foregroundStyle(Color.primary)
                                 .padding()
                         }
                     } else {
